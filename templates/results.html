@@ -1,0 +1,13 @@
+<div class="card p-4 my-4">
+    <h4 class="text-center">Query Results</h4>
+    <h5><strong>Your Question:</strong></h5>
+    <p>{{ question }}</p>
+    <h5><strong>Answer:</strong></h5>
+    <p>{{ result }}</p>
+    <h5><strong>Source Documents:</strong></h5>
+    <ul>
+        {% for snippet in sources %}
+            <li>{{ snippet.page_content }} <em>({{ snippet.metadata['source'] }})</em></li>
+        {% endfor %}
+    </ul>
+</div>
